@@ -10,7 +10,7 @@ const Header = () => {
           listClass="nav-item"
           icon={FaBars}
           anchorClass="nav-link"
-          href="/amazing"
+          href="/"
         />
         <NavItem
           listClass="nav-item"
