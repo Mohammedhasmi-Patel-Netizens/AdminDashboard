@@ -1,18 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const NavItem = ({ listClass, anchorClass, name, href, icon: Icon, role }) => {
+const NavItem = ({ listClass, anchorClass, name, href, icon: Icon, role , dataWidget}) => {
   return (
     <>
       <li className={`${listClass}`} role={`${role ? role : ""}`}>
         <Link
           to={`${href}`}
           className={`${anchorClass}`}
-          data-widget="pushmenu"
-          href="#"
+          data-widget = {dataWidget ? dataWidget:null}
           role="button"
         >
-          {name ? name : <Icon />}
+          {name ? `${name}` : <Icon />}
         </Link>
       </li>
     </>

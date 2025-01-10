@@ -11,6 +11,7 @@ const Layout = () => {
       <SideBar />
       <Outlet />
       <Footer />
+
     </div>
   );
 };

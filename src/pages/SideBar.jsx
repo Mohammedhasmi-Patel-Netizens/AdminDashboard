@@ -1,6 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const SideBar = () => {
+
+  const [toggle,setToggle] = useState(false)
+
+  function handleToggle(){
+     setToggle((prev)=>!prev)
+     console.log(toggle)
+  }
+
+
+
   return (
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
     {/* <!-- Brand Logo --> */}
@@ -41,12 +51,13 @@ const SideBar = () => {
           <li class="nav-item menu-open">
             <a href="#" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
+              <p onClick={handleToggle}>
                 Starter Pages
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-            <ul class="nav nav-treeview">
+
+            <ul className={`nav nav-treeview ${toggle ? "d-block":"d-none"}`}>
               <li class="nav-item">
                 <a href="#" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
@@ -60,6 +71,7 @@ const SideBar = () => {
                 </a>
               </li>
             </ul>
+            
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
