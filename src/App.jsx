@@ -1,10 +1,20 @@
 import React from 'react'
+import Header from './components/Header'
+import {Routes,Route} from 'react-router-dom'
+import Contact from './pages/Contact'
+import Home from './pages/Home'
+
 
 const App = () => {
   return (
     <div>
-      <button className='btn btn-danger'>Hello testing Bootrap</button>
+    <Header/>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/contact' element={<Contact/>}/>
+      </Routes>
     </div>
+     
   )
 }
 
