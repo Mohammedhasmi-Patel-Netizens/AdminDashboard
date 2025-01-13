@@ -1,7 +1,6 @@
 import React from "react";
 import NavItem from "./NavItem";
-import { FaBars, FaClock,  FaComment,  FaRegComments } from "react-icons/fa";
-import { CiStar } from "react-icons/ci";
+import {  FaClock } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 import CommentUser from "../common/CommentUser";
@@ -53,13 +52,13 @@ const Header = () => {
       </li>
 
       {/* <!-- Messages Dropdown Menu --> */}
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="far fa-comments"></i>
-          <span class="badge badge-danger navbar-badge">3</span>
+      <li className="nav-item dropdown">
+        <a className="nav-link" data-toggle="dropdown" href="#">
+          <i className="far fa-comments"></i>
+          <span className="badge badge-danger navbar-badge">3</span>
         </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <a href="#" class="dropdown-item">
+        <div className="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <a href="#" className="dropdown-item">
             {/* <!-- Message Start --> */}
             <CommentUser
             src="/dist/img/user1-128x128.jpg"
@@ -74,21 +73,12 @@ const Header = () => {
             />
             {/* <!-- Message End --> */}
           </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
+          <div className="dropdown-divider"></div>
+          <a href="#" className="dropdown-item">
             {/* <!-- Message Start --> */}
-            {/* <div class="media">
-              <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3"/>
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  John Pierce
-                  <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">I got your message bro</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-              </div>
-            </div> */}
+            
             <CommentUser 
+
             src="/dist/img/user8-128x128.jpg"
             alt="User Avatar"
             imgClass="img-size-50 mr-3 img-circle mr-3"
@@ -101,61 +91,61 @@ const Header = () => {
             />
             {/* <!-- Message End --> */}
           </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
+          <div className="dropdown-divider"></div>
+          <a href="#" className="dropdown-item">
             {/* <!-- Message Start --> */}
-            <div class="media">
+            <div className="media">
               <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3"/>
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
+              <div className="media-body">
+                <h3 className="dropdown-item-title">
                   Nora Silvester
-                  <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
+                  <span className="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
                 </h3>
-                <p class="text-sm">The subject goes here</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                <p className="text-sm">The subject goes here</p>
+                <p className="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
               </div>
             </div>
             {/* <!-- Message End --> */}
           </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+          <div className="dropdown-divider"></div>
+          <a href="#" className="dropdown-item dropdown-footer">See All Messages</a>
         </div>
       </li>
       {/* <!-- Notifications Dropdown Menu --> */}
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="far fa-bell"></i>
-          <span class="badge badge-warning navbar-badge">15</span>
+      <li className="nav-item dropdown">
+        <a className="nav-link" data-toggle="dropdown" href="#">
+          <i className="far fa-bell"></i>
+          <span className="badge badge-warning navbar-badge">15</span>
         </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <span class="dropdown-item dropdown-header">15 Notifications</span>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-envelope mr-2"></i> 4 new messages
-            <span class="float-right text-muted text-sm">3 mins</span>
+        <div className="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <span className="dropdown-item dropdown-header">15 Notifications</span>
+          <div className="dropdown-divider"></div>
+          <a href="#" className="dropdown-item">
+            <i className="fas fa-envelope mr-2"></i> 4 new messages
+            <span className="float-right text-muted text-sm">3 mins</span>
           </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-users mr-2"></i> 8 friend requests
-            <span class="float-right text-muted text-sm">12 hours</span>
+          <div className="dropdown-divider"></div>
+          <a href="#" className="dropdown-item">
+            <i className="fas fa-users mr-2"></i> 8 friend requests
+            <span className="float-right text-muted text-sm">12 hours</span>
           </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-file mr-2"></i> 3 new reports
-            <span class="float-right text-muted text-sm">2 days</span>
+          <div className="dropdown-divider"></div>
+          <a href="#" className="dropdown-item">
+            <i className="fas fa-file mr-2"></i> 3 new reports
+            <span className="float-right text-muted text-sm">2 days</span>
           </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+          <div className="dropdown-divider"></div>
+          <a href="#" className="dropdown-item dropdown-footer">See All Notifications</a>
         </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-          <i class="fas fa-expand-arrows-alt"></i>
+      <li className="nav-item">
+        <a className="nav-link" data-widget="fullscreen" href="#" role="button">
+          <i className="fas fa-expand-arrows-alt"></i>
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true" href="#" role="button">
-          <i class="fas fa-th-large"></i>
+      <li className="nav-item">
+        <a className="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true" href="#" role="button">
+          <i clclassNameass="fas fa-th-large"></i>
         </a>
       </li>
     </ul>

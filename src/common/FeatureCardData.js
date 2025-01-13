@@ -11,7 +11,7 @@ const FeatureCardData = [
         CardHeading: "React Js",
         CardTitle: "Why React is so popular",
         CardPara: "it contain htnl in js which make our life is more easier.",
-        btnClassName: "btn btn-primary",
+        btnClassName: "btn btn-danger",
         href: "react",
         hrefValue: "React"
     }

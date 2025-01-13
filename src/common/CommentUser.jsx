@@ -28,7 +28,7 @@ const CommentUser = ({
           </p>
         </div>
       </div>
-      ;
+      
     </>
   );
 };

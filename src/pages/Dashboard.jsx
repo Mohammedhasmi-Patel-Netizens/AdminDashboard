@@ -10,7 +10,7 @@ const Dashboard = () => {
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg-6">
-            <div className="d-flex gap-5">
+            <div className="d-flex gap-8">
               {/* <div class="card">
                 <div class="card-header border-0">
                   <div class="d-flex justify-content-between">
@@ -64,6 +64,8 @@ const Dashboard = () => {
                   lastTimeValue={item.lastTimeValue}
                 />
               ))}
+
+              
             </div>
           </div>
         </div>

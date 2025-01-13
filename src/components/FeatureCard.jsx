@@ -26,15 +26,6 @@ const FeatureCard = ({CardHeading,CardTitle,CardPara,btnClassName,href,hrefValue
 export default FeatureCard
 
 
-/*
-      => identify dynamic value here
-
-      -> CardHeading
-      -> CardTitle
-      ->CardPara
-      -> btnClassName
-      -> href (Link for another oute)
-      -> link value 
 
 
 
@@ -48,5 +39,3 @@ export default FeatureCard
 
 
 
-
-*/

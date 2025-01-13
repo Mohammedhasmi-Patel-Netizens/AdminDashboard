@@ -1,4 +1,6 @@
 import { FaBars } from "react-icons/fa";
+import { AiOutlineShoppingCart } from "react-icons/ai";
+
 
 const NavItemsValue = [
     {
@@ -32,6 +34,7 @@ const NavItemsValue = [
         name : "Dashboard",
         href : "/dashboard"
     },
+   
    
    
 ]
