@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Layout from "./layout/Layout";
 import SideBar from "./pages/SideBar";
 import About from "./components/About";
+import Dashboard from "./pages/Dashboard";
 
 const App = () => {
   return (
@@ -14,7 +15,7 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
-          
+          <Route path="/dashboard" element={<Dashboard />} />
         </Route>
         <Route path="/side" element={<SideBar/>}/>
       </Routes>

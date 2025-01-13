@@ -5,7 +5,7 @@ const FeatureCardData = [
         CardPara: "Trust Me learning javascript is not hard once you will understand in simple manner",
         btnClassName: "btn btn-success",
         href: "Javascript",
-        hrefValue: "js"
+        hrefValue: "Javascript"
     },
     {
         CardHeading: "React Js",

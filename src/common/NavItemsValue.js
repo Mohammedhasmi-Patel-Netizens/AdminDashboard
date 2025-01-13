@@ -26,6 +26,12 @@ const NavItemsValue = [
         name : "About Us",
         href : "/about"
     },
+    {
+        listClass:"nav-item d-none d-sm-inline-block",
+        anchorClass :"nav-link",
+        name : "Dashboard",
+        href : "/dashboard"
+    },
    
    
 ]

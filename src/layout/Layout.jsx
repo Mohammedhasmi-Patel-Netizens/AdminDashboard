@@ -9,7 +9,7 @@ const Layout = () => {
     <>
       <Header />
       <SideBar />
-      <div style={{marginLeft:"300px"}}>
+      <div style={{marginLeft:"300px",marginTop:"75px"}}>
         <Outlet />
       </div>
       <Footer style={{marginTop : "100px"}} />
