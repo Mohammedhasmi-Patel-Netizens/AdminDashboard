@@ -1,21 +1,29 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
-const CardComponent = ({title,para,cardLink,anotherCardLink}) => {
+const CardComponent = ({cardTitle,cardPara,currentCardValue,anotherCardValue,cardLink,anotherCardLink}) => {
   return (
-    <div className="card card-primary card-outline">
-    <div className="card-body">
-      <h5 className="card-title">{title}</h5>
+    <div>
+      <div class="card ml-auto">
+        <div class="card-body">
+          <h5 class="card-title">{cardTitle}</h5>
 
-      <p className="card-text">
-       {para}
-      </p>
+          <p class="card-text">
+            {cardPara}
+          </p>
 
-      <a href="#" className="card-link">{cardLink}</a>
-      <a href="#" className="card-link">{anotherCardLink}</a>
+          <Link to={`/${cardLink}`} class="card-link">
+          {currentCardValue}
+          </Link>
+          <Link to={`/${anotherCardLink}`}  class="card-link">
+          {
+            anotherCardValue
+          }
+          </Link>
+        </div>
+      </div>
     </div>
-  </div>
-  )
-}
+  );
+};
 
-export default CardComponent
-
+export default CardComponent;

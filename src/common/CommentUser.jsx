@@ -1,6 +1,5 @@
 import React from "react";
-
-const MessageUserComponent = ({
+const CommentUser = ({
   src,
   alt,
   imgClass,
@@ -34,4 +33,4 @@ const MessageUserComponent = ({
   );
 };
 
-export default MessageUserComponent;
+export default CommentUser;

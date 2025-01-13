@@ -4,18 +4,20 @@ const SideBar = () => {
 
   const [toggle,setToggle] = useState(false)
 
-  function handleToggle(){
-     setToggle((prev)=>!prev)
-     console.log(toggle)
+  // the function is use for toggle menu
+  const handleClick = ()=>{
+    setToggle(!toggle)
   }
 
 
 
+
   return (
-    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    // <!-- Main Sidebar Container -->
+  <aside className="main-sidebar sidebar-dark-primary elevation-6">
     {/* <!-- Brand Logo --> */}
     <a href="index3.html" class="brand-link">
-      <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style={{"opacity":0.8 }}/>
+      <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style={{"opacity": .8}}/>
       <span class="brand-text font-weight-light">AdminLTE 3</span>
     </a>
 
@@ -51,13 +53,12 @@ const SideBar = () => {
           <li class="nav-item menu-open">
             <a href="#" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p onClick={handleToggle}>
+              <p onClick={handleClick} >
                 Starter Pages
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-
-            <ul className={`nav nav-treeview ${toggle ? "d-block":"d-none"}`}>
+            <ul className={`nav nav-treeview d-${toggle?"block":"none"}`}>
               <li class="nav-item">
                 <a href="#" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
@@ -71,7 +72,6 @@ const SideBar = () => {
                 </a>
               </li>
             </ul>
-            
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
