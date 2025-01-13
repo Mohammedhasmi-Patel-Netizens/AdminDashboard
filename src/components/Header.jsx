@@ -5,21 +5,27 @@ import { CiStar } from "react-icons/ci";
 import { Link } from "react-router-dom";
 
 import CommentUser from "../common/CommentUser";
+import NavItemsValue from "../common/NavItemsValue";
 const Header = () => {
   return <>
   {/* // <!-- Navbar --> */}
   <nav className="main-header navbar navbar-expand navbar-white navbar-light">
     {/* <!-- Left navbar links --> */}
     <ul className="navbar-nav">
-      <li className="nav-item">
-        <a className="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-      <li className="nav-item d-none d-sm-inline-block">
-        <Link to="/" class="nav-link">Home</Link>
-      </li>
-      <li className="nav-item d-none d-sm-inline-block">
-        <Link to="/contact" class="nav-link">Contact</Link>
-      </li>
+     {
+       NavItemsValue.map((item)=>(
+         <NavItem
+        key = {item.href}
+        listClass = {item.listClass}
+        anchorClass = {item.anchorClass}
+        name = {item.name}
+        href = {item.href}
+        icon = {item?.icon}
+        dataWidget={item?.["data-widget"]}
+        
+        />
+       ))
+     }
     </ul>
 
     {/* <!-- Right navbar links --> */}

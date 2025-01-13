@@ -7,7 +7,7 @@ import FeatureCardData from "../common/FeatureCardData.js";
 const Home = () => {
   return (
     // <!-- Main content -->
-    <div className="content ml-25 ">
+    <div className="content">
       <div className="container-fluid">
         <div className="row">
           {
@@ -15,6 +15,7 @@ const Home = () => {
             CardData.map((item) => {
               return (
                 <CardComponent
+                  key={item.cardLink}
                   cardTitle={item.cardTitle}
                   cardPara={item.cardPara}
                   currentCardValue={item.currentCardValue}
@@ -28,14 +29,15 @@ const Home = () => {
           <div className="col-lg-6">
             {FeatureCardData.map((item) => {
               return (
-                  <FeatureCard
-                    CardHeading={item.CardHeading}
-                    CardTitle={item.CardTitle}
-                    CardPara={item.CardPara}
-                    btnClassName={item.btnClassName}
-                    href={item.href}
-                    hrefValue={item.hrefValue}
-                  />
+                <FeatureCard
+                  key={item.href}
+                  CardHeading={item.CardHeading}
+                  CardTitle={item.CardTitle}
+                  CardPara={item.CardPara}
+                  btnClassName={item.btnClassName}
+                  href={item.href}
+                  hrefValue={item.hrefValue}
+                />
               );
             })}
           </div>
