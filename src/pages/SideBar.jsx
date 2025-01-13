@@ -8,10 +8,6 @@ const SideBar = () => {
   const handleClick = ()=>{
     setToggle(!toggle)
   }
-
-
-
-
   return (
     // <!-- Main Sidebar Container -->
   <aside className="main-sidebar sidebar-dark-primary elevation-6">
@@ -52,7 +48,7 @@ const SideBar = () => {
                with font-awesome or any other icon font library --> */}
           <li className="nav-item menu-open">
             <a href="#" className="nav-link active">
-              <i className="nav-icon fas fa-tachometer-alt"></i>
+              <i  className="nav-icon fas fa-tachometer-alt"></i>
               <p onClick={handleClick} >
                 Starter Pages
                 <i className="right fas fa-angle-left"></i>
@@ -91,4 +87,4 @@ const SideBar = () => {
   )
 }
 
-export default SideBar
+export default SideBar;
