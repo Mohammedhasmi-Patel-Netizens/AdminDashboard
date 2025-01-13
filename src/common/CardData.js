@@ -4,8 +4,8 @@ const CardData = [
         "cardPara":"React is amazing library for creating user interface",
         "currentCardValue":"React.js",
         "anotherCardValue":"Next.js",
-        "cardLink":"http://localhost:5173/react",
-        "anotherCardLink":"/next.js"
+        "cardLink":"react",
+        "anotherCardLink":"next.js"
     },
     {
         "cardTitle":"Learning Laravel",
@@ -14,6 +14,14 @@ const CardData = [
         "anotherCardValue":"php",
         "cardLink":"/laravel",
         "anotherCardLink":"/php"
+    },
+    {
+        "cardTitle":"Algorithm And Data Structures",
+        "cardPara":"Dsa is very important topics to learn and improve problem solving skills.",
+        "currentCardValue":"Algorithm & Data Structures",
+        "anotherCardValue":"C++ DSA",
+        "cardLink":"dsa",
+        "anotherCardLink":"C++"
     }
 ];
 

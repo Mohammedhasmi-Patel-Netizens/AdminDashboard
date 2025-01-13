@@ -1,18 +1,19 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const FeatureCard = () => {
+const FeatureCard = ({CardHeading,CardTitle,CardPara,btnClassName,href,hrefValue}) => {
   return <>
     {/* <!-- /.col-md-6 --> */}
     <div className="col-lg-6">
     <div className="card">
       <div className="card-header">
-        <h5 className="m-0">Featured</h5>
+        <h5 className="m-0">{CardHeading}</h5>
       </div>
       <div className="card-body">
-        <h6 className="card-title">Special title treatment</h6>
+        <h6 className="card-title">{CardTitle}</h6>
 
-        <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" className="btn btn-primary">Go somewhere</a>
+        <p className="card-text">{CardPara}</p>
+        <Link to={`/${href}`} className={`${btnClassName}`}>{hrefValue}</Link>
       </div>
     </div>
 
@@ -23,3 +24,29 @@ const FeatureCard = () => {
 }
 
 export default FeatureCard
+
+
+/*
+      => identify dynamic value here
+
+      -> CardHeading
+      -> CardTitle
+      ->CardPara
+      -> btnClassName
+      -> href (Link for another oute)
+      -> link value 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/

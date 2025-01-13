@@ -4,15 +4,13 @@ import Header from "../components/Header";
 import { Outlet } from "react-router-dom";
 import SideBar from "../pages/SideBar";
 
-
 const Layout = () => {
   return (
     <>
       <Header />
       <SideBar />
 
-      <Outlet/>
-
+        <Outlet />
       <Footer />
     </>
   );

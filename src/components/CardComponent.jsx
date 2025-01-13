@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const CardComponent = ({cardTitle,cardPara,currentCardValue,anotherCardValue,cardLink,anotherCardLink}) => {
   return (
-    <div>
+    <div className="wrapper">
       <div class="card ml-auto">
         <div class="card-body">
           <h5 class="card-title">{cardTitle}</h5>
