@@ -9,9 +9,10 @@ const Layout = () => {
     <>
       <Header />
       <SideBar />
-
+      <div style={{marginLeft:"300px"}}>
         <Outlet />
-      <Footer />
+      </div>
+      <Footer style={{marginTop : "100px"}} />
     </>
   );
 };

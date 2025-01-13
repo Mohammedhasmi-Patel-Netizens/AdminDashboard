@@ -26,7 +26,6 @@ const Home = () => {
               );
             })
           }
-          <div className="col-lg-6">
             {FeatureCardData.map((item) => {
               return (
                 <FeatureCard
@@ -40,7 +39,6 @@ const Home = () => {
                 />
               );
             })}
-          </div>
         </div>
       </div>
     </div>
@@ -49,4 +47,3 @@ const Home = () => {
 
 export default Home;
 
-// CardHeading,CardTitle,CardPara,btnClassName,href,hrefValue

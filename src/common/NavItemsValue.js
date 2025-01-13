@@ -5,7 +5,7 @@ const NavItemsValue = [
         listClass:"nav-item d-none d-sm-inline-block",
         anchorClass :"nav-link",
         icon : FaBars,
-        href : "/about",
+        href : "/",
         "data-widget" : "pushmenu"
     },
     {
@@ -23,9 +23,10 @@ const NavItemsValue = [
     {
         listClass:"nav-item d-none d-sm-inline-block",
         anchorClass :"nav-link",
-        name : "About",
+        name : "About Us",
         href : "/about"
     },
+   
    
 ]
 
