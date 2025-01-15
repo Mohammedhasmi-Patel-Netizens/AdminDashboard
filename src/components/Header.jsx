@@ -2,9 +2,13 @@ import React from "react";
 import NavItem from "./NavItem";
 import {  FaClock } from "react-icons/fa";
 import { Link } from "react-router-dom";
-
+import MessageNotificationData from "../common/MessageNotificationData.js"
 import CommentUser from "../common/CommentUser";
 import NavItemsValue from "../common/NavItemsValue";
+import MessageNotification from "./MessageNotification"
+
+
+
 const Header = () => {
   return <>
   {/* // <!-- Navbar --> */}
@@ -14,6 +18,7 @@ const Header = () => {
      {
        NavItemsValue.map((item)=>(
          <NavItem
+
         key = {item.href}
         listClass = {item.listClass}
         anchorClass = {item.anchorClass}
@@ -119,21 +124,18 @@ const Header = () => {
         </a>
         <div className="dropdown-menu dropdown-menu-lg dropdown-menu-right">
           <span className="dropdown-item dropdown-header">15 Notifications</span>
-          <div className="dropdown-divider"></div>
-          <a href="#" className="dropdown-item">
-            <i className="fas fa-envelope mr-2"></i> 4 new messages
-            <span className="float-right text-muted text-sm">3 mins</span>
-          </a>
-          <div className="dropdown-divider"></div>
-          <a href="#" className="dropdown-item">
-            <i className="fas fa-users mr-2"></i> 8 friend requests
-            <span className="float-right text-muted text-sm">12 hours</span>
-          </a>
-          <div className="dropdown-divider"></div>
-          <a href="#" className="dropdown-item">
-            <i className="fas fa-file mr-2"></i> 3 new reports
-            <span className="float-right text-muted text-sm">2 days</span>
-          </a>
+          
+          {
+            MessageNotificationData.map((item)=>(
+              <MessageNotification
+              key = {item.id}
+              iconClass = {item.iconClass}
+              message = {item.message}
+              timeDuration = {item.timeDuration}
+             
+              />
+            ))
+          }
           <div className="dropdown-divider"></div>
           <a href="#" className="dropdown-item dropdown-footer">See All Notifications</a>
         </div>
@@ -145,7 +147,7 @@ const Header = () => {
       </li>
       <li className="nav-item">
         <a className="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true" href="#" role="button">
-          <i clclassNameass="fas fa-th-large"></i>
+          <i className="fas fa-th-large"></i>
         </a>
       </li>
     </ul>

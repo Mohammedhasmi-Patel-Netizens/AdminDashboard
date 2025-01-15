@@ -8,7 +8,7 @@ const NavItem = ({ listClass, anchorClass, name, href, icon: Icon, role , dataWi
         <Link
           to={`${href}`}
           className={`${anchorClass}`}
-          data-widget = {dataWidget ? dataWidget:null}
+          data-widget = {dataWidget ? dataWidget : null}
           role="button"
         >
           {name ? `${name}` : <Icon />}

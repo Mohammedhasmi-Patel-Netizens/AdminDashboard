@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import useToggle from "../hook/useToggle";
 import SideBarOptionComponent from "../components/SideBarOptionComponent";
+import SideBarOptions from "../common/SideBarOptions";
 const SideBar = () => {
 
   const [toggle, setToggle] = useState(false);
@@ -69,56 +69,20 @@ const SideBar = () => {
           >
             {/* <!-- Add icons to the links using the .nav-icon className
                with font-awesome or any other icon font library --> */}
-            <li className="nav-item menu-open">
-              <a href="#" className="nav-link active">
-                <i className="nav-icon fas fa-tachometer-alt"></i>
-                <p onClick={handleClick}>
-                  Starter Pages
-                  <i className="right fas fa-angle-left"></i>
-                </p>
-              </a>
-              <ul className={`nav nav-treeview d-${toggle ? "block" : "none"}`}>
-                <li className="nav-item">
-                  <a href="#" className="nav-link active">
-                    <i className="far fa-circle nav-icon"></i>
-                    <p>Active Page</p>
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a href="#" className="nav-link">
-                    <i className="far fa-circle nav-icon"></i>
-                    <p>Inactive Page</p>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            {/* <li className="nav-item">
-              <a href="#" className="nav-link">
-                <i className="nav-icon fas fa-th"></i>
-                <p onClick={toggleSidebar}>
-                  Dashboard
-                  <i className="right fas fa-angle-left"></i>
-                </p>
-                <ul className={`nav nav-treeview d-${isSidebarOpen ? "block" : "none"}`}>
-                  <li className="nav-item">
-                    <a href="#" className="nav-link">
-                      <i className="far fa-circle nav-icon"></i>
-                      <p>Dashboard1</p>
-                    </a>
-                    <a href="#" className="nav-link">
-                      <i className="far fa-circle nav-icon"></i>
-                      <p>Dashboard2</p>
-                    </a>
-                  </li>
-                </ul>
-              </a>
-            </li> */}
-            <SideBarOptionComponent
-            optionValue = "Netizens"
-            firstSubMenu = "Tech Lead"
-            secondSubMenu = "Interns"
-            navIconClass="nav-icon fas fa-th"
-            />
+            
+            {
+              SideBarOptions.map((item)=>(
+                <SideBarOptionComponent
+
+                key = {item.optionValue}
+                isActive = {item.isActive}
+                navIconClass = {item.navIconClass}
+                optionValue  = {item.optionValue}
+                firstSubMenu = {item.firstSubMenu}
+                secondSubMenu = {item.secondSubMenu}
+                />
+              ))
+            }
           </ul>
         </nav>
         {/* <!-- /.sidebar-menu --> */}

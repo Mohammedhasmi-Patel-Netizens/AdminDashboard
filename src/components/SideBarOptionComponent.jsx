@@ -1,17 +1,16 @@
 import React from "react";
 import useToggle from "../hook/useToggle";
+import { Link } from "react-router-dom";
 
-const SideBarOptionComponent = ({navIconClass,optionValue,firstSubMenu,secondSubMenu}) => {
+const SideBarOptionComponent = ({isActive,navIconClass,optionValue,firstSubMenu,secondSubMenu}) => {
   const [isSidebarOpen, toggleSidebar] = useToggle();
 
   return (
-    <li className="nav-item">
-      <a href="#" className="nav-link">
+    <li className={`${isSidebarOpen?"nav-item menu-is-opening menu-open":"nav-item"}`}>
+      <Link to="/" className={`nav-link ${isActive ? "active":""}`}>
         <i className={`${navIconClass}`}></i>
         <p onClick={toggleSidebar}>
-          {
-            optionValue
-          }
+          {optionValue}
           <i className="right fas fa-angle-left"></i>
         </p>
         <ul
@@ -28,7 +27,7 @@ const SideBarOptionComponent = ({navIconClass,optionValue,firstSubMenu,secondSub
             </a>
           </li>
         </ul>
-      </a>
+      </Link>
     </li>
   );
 };
